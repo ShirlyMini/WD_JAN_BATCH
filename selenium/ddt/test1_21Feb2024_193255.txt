@@ -1,0 +1,4 @@
+2024-02-21 19:32:55,389 INFO this is info
+2024-02-21 19:32:55,389 WARNING this is warn
+2024-02-21 19:32:55,389 ERROR this is error
+2024-02-21 19:32:55,389 CRITICAL this is critical
