@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-03-07T08:58:15.460055" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\robot_framework\login.robot">
+<test id="s1-t1" name="Login in to nopcommerce page" line="12">
+<kw name="nopcommerce setup" owner="Resources" type="SETUP">
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-03-07T08:58:15.952940" level="DEBUG">Log level changed from INFO to TRACE.</msg>
+<msg time="2024-03-07T08:58:15.953938" level="TRACE">Return: 'INFO'</msg>
+<arg>TRACE</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-03-07T08:58:15.952940" elapsed="0.000998"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:15.955937" level="TRACE">Arguments: [ 'https://admin-demo.nopcommerce.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-07T08:58:15.955937" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg time="2024-03-07T08:58:15.962930" level="DEBUG">Selenium Manager binary found at: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-07T08:58:15.962930" level="DEBUG">Executing process: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2024-03-07T08:58:17.068342" level="DEBUG">Driver path: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:17.069334" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-07T08:58:17.069334" level="DEBUG">Using driver at: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:17.101306" level="DEBUG">Started executable: `E:\selenium\drivers\chromedriver.exe` in a child process with pid: 20280 using 0 to output -3</msg>
+<msg time="2024-03-07T08:58:17.617006" level="DEBUG">POST http://localhost:63618/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions": {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "args": []}}}}</msg>
+<msg time="2024-03-07T08:58:17.618008" level="DEBUG">Starting new HTTP connection (1): localhost:63618</msg>
+<msg time="2024-03-07T08:58:18.941944" level="DEBUG">http://localhost:63618 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:18.942943" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"122.0.6261.95","chrome":{"chromedriverVersion":"122.0.6261.69 (81bc525b6a36d91ed7fe98a4b53c6f53c79adbb2-refs/branch-heads/6261_57@{#3})","userDataDir":"C:\\Users\\user\\AppData\\Local\\Temp\\scoped_dir20280_1622207916"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63622"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"2d8ad6ae3e8c26c24f0491a5e3e33376"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:18.942943" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:18.942943" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/timeouts {"script": 5000}</msg>
+<msg time="2024-03-07T08:58:18.948937" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:18.948937" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:18.948937" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:18.949936" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/timeouts {"implicit": 0}</msg>
+<msg time="2024-03-07T08:58:18.951936" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:18.951936" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:18.951936" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:18.952935" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/timeouts {"pageLoad": 300000}</msg>
+<msg time="2024-03-07T08:58:18.960927" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:18.961927" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:18.961927" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:18.961927" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/url {"url": "https://admin-demo.nopcommerce.com/"}</msg>
+<msg time="2024-03-07T08:58:24.742699" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:24.742699" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:24.742699" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:24.743701" level="DEBUG">Opened browser with session id 2d8ad6ae3e8c26c24f0491a5e3e33376.</msg>
+<msg time="2024-03-07T08:58:24.743701" level="TRACE">Return: 1</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-07T08:58:15.954938" elapsed="8.788763"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:24.744697" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:58:24.745696" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/window/maximize {}</msg>
+<msg time="2024-03-07T08:58:24.899626" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:24.899626" level="DEBUG">Remote response: status=200 | data={"value":{"height":744,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:24.899626" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:24.900620" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-07T08:58:24.744697" elapsed="0.155923"/>
+</kw>
+<msg time="2024-03-07T08:58:24.900620" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-03-07T08:58:15.949942" elapsed="8.951679"/>
+</kw>
+<kw name="Login using username and password with return" owner="Resources">
+<msg time="2024-03-07T08:58:24.904615" level="TRACE">Arguments: [ ${usr}='admin@yourstore.com' | ${pass}='admin' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:24.905615" level="TRACE">Arguments: [ 'id:Email' | 'admin@yourstore.com' | clear=True ]</msg>
+<msg time="2024-03-07T08:58:24.905615" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<msg time="2024-03-07T08:58:24.906614" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/elements {"using": "css selector", "value": "[id=\"Email\"]"}</msg>
+<msg time="2024-03-07T08:58:24.932590" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:24.932590" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.1"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:24.932590" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:24.933589" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.1/clear {}</msg>
+<msg time="2024-03-07T08:58:25.004523" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.1/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:25.004523" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:25.005525" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:25.005525" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.1/value {"text": "admin@yourstore.com", "value": ["a", "d", "m", "i", "n", "@", "y", "o", "u", "r", "s", "t", "o", "r", "e", ".", "c", "o", "m"]}</msg>
+<msg time="2024-03-07T08:58:25.173365" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.1/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:25.173365" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:25.173365" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:25.173365" level="TRACE">Return: None</msg>
+<arg>id:Email</arg>
+<arg>${usr}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:24.904615" elapsed="0.269750"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:25.174365" level="TRACE">Arguments: [ 'id:Password' | 'admin' | clear=True ]</msg>
+<msg time="2024-03-07T08:58:25.174365" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<msg time="2024-03-07T08:58:25.175363" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/elements {"using": "css selector", "value": "[id=\"Password\"]"}</msg>
+<msg time="2024-03-07T08:58:25.188351" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:25.188351" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:25.189351" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:25.189351" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.3/clear {}</msg>
+<msg time="2024-03-07T08:58:25.248296" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:25.249298" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:25.249298" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:25.249298" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.3/value {"text": "admin", "value": ["a", "d", "m", "i", "n"]}</msg>
+<msg time="2024-03-07T08:58:25.327223" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:25.327223" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:25.327223" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:25.327223" level="TRACE">Return: None</msg>
+<arg>id:Password</arg>
+<arg>${pass}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:25.174365" elapsed="0.153856"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:25.328221" level="TRACE">Arguments: [ "xpath: //button[contains(text(),'Log in')]" ]</msg>
+<msg time="2024-03-07T08:58:25.328221" level="INFO">Clicking element 'xpath: //button[contains(text(),'Log in')]'.</msg>
+<msg time="2024-03-07T08:58:25.328221" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/elements {"using": "xpath", "value": "//button[contains(text(),'Log in')]"}</msg>
+<msg time="2024-03-07T08:58:25.350201" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:25.350201" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.7"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:25.350201" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:25.351200" level="DEBUG">POST http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.7/click {}</msg>
+<msg time="2024-03-07T08:58:27.580430" level="DEBUG">http://localhost:63618 "POST /session/2d8ad6ae3e8c26c24f0491a5e3e33376/element/f.F66889E5D51137E88635BF2CD8A0D799.d.AD0BD3BA9FE622F39F5B20918E19C063.e.7/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:27.581429" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:27.581429" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:27.581429" level="TRACE">Return: None</msg>
+<arg>xpath: //button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:25.328221" elapsed="2.253208"/>
+</kw>
+<return>
+<value>True</value>
+<status status="PASS" start="2024-03-07T08:58:27.581429" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-07T08:58:27.582428" level="TRACE">Return: 'True'</msg>
+<msg time="2024-03-07T08:58:27.582428" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>${user}</arg>
+<arg>${pswd}</arg>
+<status status="PASS" start="2024-03-07T08:58:24.902619" elapsed="2.679809"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-07T08:58:27.585426" level="TRACE">Arguments: [ 'True' | console=True ]</msg>
+<msg time="2024-03-07T08:58:27.585426" level="INFO">True</msg>
+<msg time="2024-03-07T08:58:27.585426" level="TRACE">Return: None</msg>
+<arg>${status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-07T08:58:27.585426" elapsed="0.000999"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:27.587424" level="TRACE">Arguments: [ 'Dashboard / nopCommerce administration' ]</msg>
+<msg time="2024-03-07T08:58:27.588424" level="DEBUG">GET http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376/title {}</msg>
+<msg time="2024-03-07T08:58:27.613398" level="DEBUG">http://localhost:63618 "GET /session/2d8ad6ae3e8c26c24f0491a5e3e33376/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:27.613398" level="DEBUG">Remote response: status=200 | data={"value":"Dashboard / nopCommerce administration"} | headers=HTTPHeaderDict({'Content-Length': '50', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:27.613398" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:27.614398" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
+<msg time="2024-03-07T08:58:27.614398" level="TRACE">Return: None</msg>
+<arg>Dashboard / nopCommerce administration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-07T08:58:27.587424" elapsed="0.026974"/>
+</kw>
+<kw name="nopcommerce teardown" owner="Resources" type="TEARDOWN">
+<msg time="2024-03-07T08:58:27.615397" level="TRACE">Arguments: [  ]</msg>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:27.616397" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:58:27.616397" level="DEBUG">Closing browser with session id 2d8ad6ae3e8c26c24f0491a5e3e33376.</msg>
+<msg time="2024-03-07T08:58:27.616397" level="DEBUG">DELETE http://localhost:63618/session/2d8ad6ae3e8c26c24f0491a5e3e33376 {}</msg>
+<msg time="2024-03-07T08:58:28.067114" level="DEBUG">http://localhost:63618 "DELETE /session/2d8ad6ae3e8c26c24f0491a5e3e33376 HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:28.067114" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:28.067114" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:30.214452" level="TRACE">Return: None</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-07T08:58:27.616397" elapsed="2.599036"/>
+</kw>
+<msg time="2024-03-07T08:58:30.215433" level="TRACE">Return: None</msg>
+<status status="PASS" start="2024-03-07T08:58:27.615397" elapsed="2.600036"/>
+</kw>
+<status status="PASS" start="2024-03-07T08:58:15.946946" elapsed="14.269486"/>
+</test>
+<test id="s1-t2" name="Login in to nopcommerce page-ddt" line="25">
+<kw name="Set Log Level" owner="BuiltIn">
+<msg time="2024-03-07T08:58:30.218432" level="TRACE">Arguments: [ 'TRACE' ]</msg>
+<msg time="2024-03-07T08:58:30.219434" level="DEBUG">Log level changed from TRACE to TRACE.</msg>
+<msg time="2024-03-07T08:58:30.219434" level="TRACE">Return: 'TRACE'</msg>
+<arg>TRACE</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-03-07T08:58:30.218432" elapsed="0.001002"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:30.221426" level="TRACE">Arguments: [ 'https://admin-demo.nopcommerce.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-07T08:58:30.221426" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg time="2024-03-07T08:58:30.222427" level="DEBUG">Selenium Manager binary found at: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-07T08:58:30.222427" level="DEBUG">Executing process: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2024-03-07T08:58:30.824468" level="DEBUG">Driver path: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:30.824468" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-07T08:58:30.825468" level="DEBUG">Using driver at: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:30.829464" level="DEBUG">Started executable: `E:\selenium\drivers\chromedriver.exe` in a child process with pid: 5076 using 0 to output -3</msg>
+<msg time="2024-03-07T08:58:31.336959" level="DEBUG">POST http://localhost:63643/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions": {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "args": []}}}}</msg>
+<msg time="2024-03-07T08:58:31.337948" level="DEBUG">Starting new HTTP connection (1): localhost:63643</msg>
+<msg time="2024-03-07T08:58:32.383542" level="DEBUG">http://localhost:63643 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:32.383542" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"122.0.6261.95","chrome":{"chromedriverVersion":"122.0.6261.69 (81bc525b6a36d91ed7fe98a4b53c6f53c79adbb2-refs/branch-heads/6261_57@{#3})","userDataDir":"C:\\Users\\user\\AppData\\Local\\Temp\\scoped_dir5076_128144132"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63647"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"21b735c9b4d1b3721b9be52ca30fab28"}} | headers=HTTPHeaderDict({'Content-Length': '879', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:32.383542" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:32.384541" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/timeouts {"script": 5000}</msg>
+<msg time="2024-03-07T08:58:32.401525" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:32.401525" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:32.401525" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:32.402524" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/timeouts {"implicit": 0}</msg>
+<msg time="2024-03-07T08:58:32.405522" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:32.405522" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:32.406521" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:32.406521" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/timeouts {"pageLoad": 300000}</msg>
+<msg time="2024-03-07T08:58:32.411522" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:32.411522" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:32.412515" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:32.412515" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/url {"url": "https://admin-demo.nopcommerce.com/"}</msg>
+<msg time="2024-03-07T08:58:38.749230" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:38.749230" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:38.749230" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:38.749230" level="DEBUG">Opened browser with session id 21b735c9b4d1b3721b9be52ca30fab28.</msg>
+<msg time="2024-03-07T08:58:38.750229" level="TRACE">Return: 2</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-07T08:58:30.220428" elapsed="8.530801"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:38.752228" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:58:38.752228" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/window/maximize {}</msg>
+<msg time="2024-03-07T08:58:38.907962" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:38.907962" level="DEBUG">Remote response: status=200 | data={"value":{"height":744,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:38.908960" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:38.908960" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-07T08:58:38.751229" elapsed="0.157731"/>
+</kw>
+<kw name="Login using username and password with return" owner="Resources">
+<msg time="2024-03-07T08:58:38.912955" level="TRACE">Arguments: [ ${usr}='admin@yourstore.com' | ${pass}='admin' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:38.913956" level="TRACE">Arguments: [ 'id:Email' | 'admin@yourstore.com' | clear=True ]</msg>
+<msg time="2024-03-07T08:58:38.913956" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<msg time="2024-03-07T08:58:38.913956" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/elements {"using": "css selector", "value": "[id=\"Email\"]"}</msg>
+<msg time="2024-03-07T08:58:38.933445" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:38.934452" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.2"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:38.934452" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:38.934452" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.2/clear {}</msg>
+<msg time="2024-03-07T08:58:39.005385" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.2/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:39.005385" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:39.005385" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:39.006382" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.2/value {"text": "admin@yourstore.com", "value": ["a", "d", "m", "i", "n", "@", "y", "o", "u", "r", "s", "t", "o", "r", "e", ".", "c", "o", "m"]}</msg>
+<msg time="2024-03-07T08:58:39.208194" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.2/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:39.209193" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:39.209193" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:39.209193" level="TRACE">Return: None</msg>
+<arg>id:Email</arg>
+<arg>${usr}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:38.912955" elapsed="0.296238"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:39.210193" level="TRACE">Arguments: [ 'id:Password' | 'admin' | clear=True ]</msg>
+<msg time="2024-03-07T08:58:39.210193" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<msg time="2024-03-07T08:58:39.210193" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/elements {"using": "css selector", "value": "[id=\"Password\"]"}</msg>
+<msg time="2024-03-07T08:58:39.231173" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:39.232173" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.4"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:39.232173" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:39.232173" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.4/clear {}</msg>
+<msg time="2024-03-07T08:58:39.286122" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.4/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:39.286122" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:39.286122" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:39.287122" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.4/value {"text": "admin", "value": ["a", "d", "m", "i", "n"]}</msg>
+<msg time="2024-03-07T08:58:39.356566" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.4/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:39.357565" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:39.357565" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:39.357565" level="TRACE">Return: None</msg>
+<arg>id:Password</arg>
+<arg>${pass}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:39.210193" elapsed="0.147372"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:39.358566" level="TRACE">Arguments: [ "xpath: //button[contains(text(),'Log in')]" ]</msg>
+<msg time="2024-03-07T08:58:39.358566" level="INFO">Clicking element 'xpath: //button[contains(text(),'Log in')]'.</msg>
+<msg time="2024-03-07T08:58:39.358566" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/elements {"using": "xpath", "value": "//button[contains(text(),'Log in')]"}</msg>
+<msg time="2024-03-07T08:58:39.377547" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:39.377547" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.6"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:39.377547" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:39.377547" level="DEBUG">POST http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.6/click {}</msg>
+<msg time="2024-03-07T08:58:41.899659" level="DEBUG">http://localhost:63643 "POST /session/21b735c9b4d1b3721b9be52ca30fab28/element/f.7DE4DC3AC03805ACB4D5DB7E34103EB7.d.45597D6CE7C26E461FCF7DC2CB3298C1.e.6/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:41.900657" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:41.900657" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:41.900657" level="TRACE">Return: None</msg>
+<arg>xpath: //button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:39.357565" elapsed="2.543092"/>
+</kw>
+<return>
+<value>True</value>
+<status status="PASS" start="2024-03-07T08:58:41.900657" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-07T08:58:41.901655" level="TRACE">Return: 'True'</msg>
+<msg time="2024-03-07T08:58:41.901655" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>${data[0]}</arg>
+<arg>${data[1]}</arg>
+<status status="PASS" start="2024-03-07T08:58:38.909958" elapsed="2.991697"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-07T08:58:41.902655" level="TRACE">Arguments: [ 'True' | console=True ]</msg>
+<msg time="2024-03-07T08:58:41.902655" level="INFO">True</msg>
+<msg time="2024-03-07T08:58:41.909649" level="TRACE">Return: None</msg>
+<arg>${status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-07T08:58:41.902655" elapsed="0.006994"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2024-03-07T08:58:41.911646" level="TRACE">Arguments: [ '"Pass"=="Pass"' | 'Title Should Be' | 'Dashboard / nopCommerce administration' | 'ELSE IF' | '"${data[2]}"=="Fail"' | 'Title Should Be' | 'Your store. Login' ]</msg>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:41.914643" level="TRACE">Arguments: [ 'Dashboard / nopCommerce administration' ]</msg>
+<msg time="2024-03-07T08:58:41.915642" level="DEBUG">GET http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28/title {}</msg>
+<msg time="2024-03-07T08:58:43.163531" level="DEBUG">http://localhost:63643 "GET /session/21b735c9b4d1b3721b9be52ca30fab28/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:43.163531" level="DEBUG">Remote response: status=200 | data={"value":"Dashboard / nopCommerce administration"} | headers=HTTPHeaderDict({'Content-Length': '50', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:43.164529" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:43.164529" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
+<msg time="2024-03-07T08:58:43.164529" level="TRACE">Return: None</msg>
+<arg>Dashboard / nopCommerce administration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-07T08:58:41.914643" elapsed="1.249886"/>
+</kw>
+<msg time="2024-03-07T08:58:43.164529" level="TRACE">Return: None</msg>
+<arg>"${data[2]}"=="Pass"</arg>
+<arg>Title Should Be</arg>
+<arg>Dashboard / nopCommerce administration</arg>
+<arg>ELSE IF</arg>
+<arg>"${data[2]}"=="Fail"</arg>
+<arg>Title Should Be</arg>
+<arg>Your store. Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-07T08:58:41.910647" elapsed="1.253882"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:43.165528" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:58:43.165528" level="DEBUG">Closing browser with session id 21b735c9b4d1b3721b9be52ca30fab28.</msg>
+<msg time="2024-03-07T08:58:43.165528" level="DEBUG">DELETE http://localhost:63643/session/21b735c9b4d1b3721b9be52ca30fab28 {}</msg>
+<msg time="2024-03-07T08:58:43.334370" level="DEBUG">http://localhost:63643 "DELETE /session/21b735c9b4d1b3721b9be52ca30fab28 HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:43.334370" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:43.334370" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:45.467673" level="TRACE">Return: None</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-07T08:58:43.165528" elapsed="2.302145"/>
+</kw>
+<var name="${data}">('admin@yourstore.com', 'admin', 'Pass')</var>
+<status status="PASS" start="2024-03-07T08:58:30.220428" elapsed="15.247245"/>
+</iter>
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:45.468673" level="TRACE">Arguments: [ 'https://admin-demo.nopcommerce.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-07T08:58:45.468673" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg time="2024-03-07T08:58:45.469672" level="DEBUG">Selenium Manager binary found at: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-07T08:58:45.470669" level="DEBUG">Executing process: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2024-03-07T08:58:46.132041" level="DEBUG">Driver path: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:46.132041" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-07T08:58:46.132041" level="DEBUG">Using driver at: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:46.137037" level="DEBUG">Started executable: `E:\selenium\drivers\chromedriver.exe` in a child process with pid: 16500 using 0 to output -3</msg>
+<msg time="2024-03-07T08:58:46.644713" level="DEBUG">POST http://localhost:63671/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions": {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "args": []}}}}</msg>
+<msg time="2024-03-07T08:58:46.644713" level="DEBUG">Starting new HTTP connection (1): localhost:63671</msg>
+<msg time="2024-03-07T08:58:47.705200" level="DEBUG">http://localhost:63671 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:47.705200" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"122.0.6261.95","chrome":{"chromedriverVersion":"122.0.6261.69 (81bc525b6a36d91ed7fe98a4b53c6f53c79adbb2-refs/branch-heads/6261_57@{#3})","userDataDir":"C:\\Users\\user\\AppData\\Local\\Temp\\scoped_dir16500_90974898"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63675"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"0d9ad2f340b4e401839be46dd3f2c225"}} | headers=HTTPHeaderDict({'Content-Length': '879', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:47.705200" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:47.705200" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/timeouts {"script": 5000}</msg>
+<msg time="2024-03-07T08:58:47.707199" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:47.708199" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:47.708199" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:47.708199" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/timeouts {"implicit": 0}</msg>
+<msg time="2024-03-07T08:58:47.710196" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:47.710196" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:47.711195" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:47.711195" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/timeouts {"pageLoad": 300000}</msg>
+<msg time="2024-03-07T08:58:47.713193" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:47.713193" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:47.713193" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:47.714192" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/url {"url": "https://admin-demo.nopcommerce.com/"}</msg>
+<msg time="2024-03-07T08:58:53.561982" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:53.562981" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:53.562981" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:53.562981" level="DEBUG">Opened browser with session id 0d9ad2f340b4e401839be46dd3f2c225.</msg>
+<msg time="2024-03-07T08:58:53.562981" level="TRACE">Return: 3</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-07T08:58:45.468673" elapsed="8.094308"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:53.563979" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:58:53.563979" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/window/maximize {}</msg>
+<msg time="2024-03-07T08:58:53.693514" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:53.693514" level="DEBUG">Remote response: status=200 | data={"value":{"height":744,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:53.693514" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:53.693514" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-07T08:58:53.563979" elapsed="0.129535"/>
+</kw>
+<kw name="Login using username and password with return" owner="Resources">
+<msg time="2024-03-07T08:58:53.695509" level="TRACE">Arguments: [ ${usr}='admin@yourstore.com' | ${pass}='adm' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:53.696507" level="TRACE">Arguments: [ 'id:Email' | 'admin@yourstore.com' | clear=True ]</msg>
+<msg time="2024-03-07T08:58:53.696507" level="INFO">Typing text 'admin@yourstore.com' into text field 'id:Email'.</msg>
+<msg time="2024-03-07T08:58:53.696507" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/elements {"using": "css selector", "value": "[id=\"Email\"]"}</msg>
+<msg time="2024-03-07T08:58:53.720486" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:53.720486" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.1"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:53.721484" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:53.721484" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.1/clear {}</msg>
+<msg time="2024-03-07T08:58:53.776438" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.1/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:53.776438" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:53.777440" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:53.777440" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.1/value {"text": "admin@yourstore.com", "value": ["a", "d", "m", "i", "n", "@", "y", "o", "u", "r", "s", "t", "o", "r", "e", ".", "c", "o", "m"]}</msg>
+<msg time="2024-03-07T08:58:53.973250" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.1/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:53.973250" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:53.973250" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:53.973250" level="TRACE">Return: None</msg>
+<arg>id:Email</arg>
+<arg>${usr}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:53.696507" elapsed="0.276743"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:53.974250" level="TRACE">Arguments: [ 'id:Password' | 'adm' | clear=True ]</msg>
+<msg time="2024-03-07T08:58:53.974250" level="INFO">Typing text 'adm' into text field 'id:Password'.</msg>
+<msg time="2024-03-07T08:58:53.974250" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/elements {"using": "css selector", "value": "[id=\"Password\"]"}</msg>
+<msg time="2024-03-07T08:58:53.989448" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:53.989448" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:53.989448" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:53.989448" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.3/clear {}</msg>
+<msg time="2024-03-07T08:58:54.034407" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:54.034407" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:54.035406" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:54.035406" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.3/value {"text": "adm", "value": ["a", "d", "m"]}</msg>
+<msg time="2024-03-07T08:58:54.099231" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:54.099231" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:54.099231" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:54.100230" level="TRACE">Return: None</msg>
+<arg>id:Password</arg>
+<arg>${pass}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:53.974250" elapsed="0.125980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:54.100230" level="TRACE">Arguments: [ "xpath: //button[contains(text(),'Log in')]" ]</msg>
+<msg time="2024-03-07T08:58:54.100230" level="INFO">Clicking element 'xpath: //button[contains(text(),'Log in')]'.</msg>
+<msg time="2024-03-07T08:58:54.100230" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/elements {"using": "xpath", "value": "//button[contains(text(),'Log in')]"}</msg>
+<msg time="2024-03-07T08:58:54.119213" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:54.119213" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.6"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:54.120212" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:54.120212" level="DEBUG">POST http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.6/click {}</msg>
+<msg time="2024-03-07T08:58:54.657429" level="DEBUG">http://localhost:63671 "POST /session/0d9ad2f340b4e401839be46dd3f2c225/element/f.9602268E7410C328537D54DFAE22CB90.d.159DD5AFF8D409E9B2F9B4CC6E95F9B1.e.6/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:54.658428" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:54.658428" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:54.658428" level="TRACE">Return: None</msg>
+<arg>xpath: //button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:58:54.100230" elapsed="0.558198"/>
+</kw>
+<return>
+<value>True</value>
+<status status="PASS" start="2024-03-07T08:58:54.659426" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-07T08:58:54.659426" level="TRACE">Return: 'True'</msg>
+<msg time="2024-03-07T08:58:54.659426" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>${data[0]}</arg>
+<arg>${data[1]}</arg>
+<status status="PASS" start="2024-03-07T08:58:53.694510" elapsed="0.964916"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-07T08:58:54.660425" level="TRACE">Arguments: [ 'True' | console=True ]</msg>
+<msg time="2024-03-07T08:58:54.660425" level="INFO">True</msg>
+<msg time="2024-03-07T08:58:54.661425" level="TRACE">Return: None</msg>
+<arg>${status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-07T08:58:54.659426" elapsed="0.001999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2024-03-07T08:58:54.664422" level="TRACE">Arguments: [ '"Fail"=="Pass"' | 'Title Should Be' | 'Dashboard / nopCommerce administration' | 'ELSE IF' | '"${data[2]}"=="Fail"' | 'Title Should Be' | 'Your store. Login' ]</msg>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:54.668420" level="TRACE">Arguments: [ 'Your store. Login' ]</msg>
+<msg time="2024-03-07T08:58:54.669417" level="DEBUG">GET http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225/title {}</msg>
+<msg time="2024-03-07T08:58:54.798296" level="DEBUG">http://localhost:63671 "GET /session/0d9ad2f340b4e401839be46dd3f2c225/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:54.798296" level="DEBUG">Remote response: status=200 | data={"value":"Your store. Login"} | headers=HTTPHeaderDict({'Content-Length': '29', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:54.798296" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:54.798296" level="INFO">Page title is 'Your store. Login'.</msg>
+<msg time="2024-03-07T08:58:54.798296" level="TRACE">Return: None</msg>
+<arg>Your store. Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-07T08:58:54.668420" elapsed="0.130876"/>
+</kw>
+<msg time="2024-03-07T08:58:54.799296" level="TRACE">Return: None</msg>
+<arg>"${data[2]}"=="Pass"</arg>
+<arg>Title Should Be</arg>
+<arg>Dashboard / nopCommerce administration</arg>
+<arg>ELSE IF</arg>
+<arg>"${data[2]}"=="Fail"</arg>
+<arg>Title Should Be</arg>
+<arg>Your store. Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-07T08:58:54.662424" elapsed="0.136872"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:54.799296" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:58:54.799296" level="DEBUG">Closing browser with session id 0d9ad2f340b4e401839be46dd3f2c225.</msg>
+<msg time="2024-03-07T08:58:54.799296" level="DEBUG">DELETE http://localhost:63671/session/0d9ad2f340b4e401839be46dd3f2c225 {}</msg>
+<msg time="2024-03-07T08:58:54.901584" level="DEBUG">http://localhost:63671 "DELETE /session/0d9ad2f340b4e401839be46dd3f2c225 HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:54.901584" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:54.901584" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:57.084154" level="TRACE">Return: None</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-07T08:58:54.799296" elapsed="2.284858"/>
+</kw>
+<var name="${data}">('admin@yourstore.com', 'adm', 'Fail')</var>
+<status status="PASS" start="2024-03-07T08:58:45.468673" elapsed="11.615481"/>
+</iter>
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:58:57.085139" level="TRACE">Arguments: [ 'https://admin-demo.nopcommerce.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-07T08:58:57.085139" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg time="2024-03-07T08:58:57.086137" level="DEBUG">Selenium Manager binary found at: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-07T08:58:57.086137" level="DEBUG">Executing process: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2024-03-07T08:58:57.767354" level="DEBUG">Driver path: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:57.767354" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-07T08:58:57.767354" level="DEBUG">Using driver at: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:58:57.772351" level="DEBUG">Started executable: `E:\selenium\drivers\chromedriver.exe` in a child process with pid: 12004 using 0 to output -3</msg>
+<msg time="2024-03-07T08:58:58.288543" level="DEBUG">POST http://localhost:63695/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions": {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "args": []}}}}</msg>
+<msg time="2024-03-07T08:58:58.289519" level="DEBUG">Starting new HTTP connection (1): localhost:63695</msg>
+<msg time="2024-03-07T08:58:59.419034" level="DEBUG">http://localhost:63695 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:59.419034" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"122.0.6261.95","chrome":{"chromedriverVersion":"122.0.6261.69 (81bc525b6a36d91ed7fe98a4b53c6f53c79adbb2-refs/branch-heads/6261_57@{#3})","userDataDir":"C:\\Users\\user\\AppData\\Local\\Temp\\scoped_dir12004_1320774709"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63699"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"748a7d169a6eeca82cca2a07a3fd6813"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:59.420033" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:59.423032" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/timeouts {"script": 5000}</msg>
+<msg time="2024-03-07T08:58:59.433020" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:59.433020" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:59.434021" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:59.434021" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/timeouts {"implicit": 0}</msg>
+<msg time="2024-03-07T08:58:59.457997" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:59.457997" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:59.457997" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:59.457997" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/timeouts {"pageLoad": 300000}</msg>
+<msg time="2024-03-07T08:58:59.462992" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:58:59.462992" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:58:59.462992" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:58:59.463991" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/url {"url": "https://admin-demo.nopcommerce.com/"}</msg>
+<msg time="2024-03-07T08:59:06.408372" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.408372" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.409371" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.409371" level="DEBUG">Opened browser with session id 748a7d169a6eeca82cca2a07a3fd6813.</msg>
+<msg time="2024-03-07T08:59:06.409371" level="TRACE">Return: 4</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-07T08:58:57.085139" elapsed="9.324232"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:06.410371" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:59:06.411370" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/window/maximize {}</msg>
+<msg time="2024-03-07T08:59:06.551241" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.551241" level="DEBUG">Remote response: status=200 | data={"value":{"height":744,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.551241" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.552239" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-07T08:59:06.410371" elapsed="0.141868"/>
+</kw>
+<kw name="Login using username and password with return" owner="Resources">
+<msg time="2024-03-07T08:59:06.554236" level="TRACE">Arguments: [ ${usr}='adm@yourstore.com' | ${pass}='admin' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:06.554236" level="TRACE">Arguments: [ 'id:Email' | 'adm@yourstore.com' | clear=True ]</msg>
+<msg time="2024-03-07T08:59:06.554236" level="INFO">Typing text 'adm@yourstore.com' into text field 'id:Email'.</msg>
+<msg time="2024-03-07T08:59:06.555237" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/elements {"using": "css selector", "value": "[id=\"Email\"]"}</msg>
+<msg time="2024-03-07T08:59:06.578215" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.578215" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.1"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.578215" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.578215" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.1/clear {}</msg>
+<msg time="2024-03-07T08:59:06.650148" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.1/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.651147" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.651147" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.651147" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.1/value {"text": "adm@yourstore.com", "value": ["a", "d", "m", "@", "y", "o", "u", "r", "s", "t", "o", "r", "e", ".", "c", "o", "m"]}</msg>
+<msg time="2024-03-07T08:59:06.765043" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.1/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.765043" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.765043" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.766042" level="TRACE">Return: None</msg>
+<arg>id:Email</arg>
+<arg>${usr}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:59:06.554236" elapsed="0.211806"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:06.767040" level="TRACE">Arguments: [ 'id:Password' | 'admin' | clear=True ]</msg>
+<msg time="2024-03-07T08:59:06.767040" level="INFO">Typing text 'admin' into text field 'id:Password'.</msg>
+<msg time="2024-03-07T08:59:06.767040" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/elements {"using": "css selector", "value": "[id=\"Password\"]"}</msg>
+<msg time="2024-03-07T08:59:06.788018" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.788018" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.788018" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.789017" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.3/clear {}</msg>
+<msg time="2024-03-07T08:59:06.909906" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.910905" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.910905" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.910905" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.3/value {"text": "admin", "value": ["a", "d", "m", "i", "n"]}</msg>
+<msg time="2024-03-07T08:59:06.997824" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:06.997824" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:06.997824" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:06.998822" level="TRACE">Return: None</msg>
+<arg>id:Password</arg>
+<arg>${pass}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:59:06.766042" elapsed="0.232780"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:06.999821" level="TRACE">Arguments: [ "xpath: //button[contains(text(),'Log in')]" ]</msg>
+<msg time="2024-03-07T08:59:06.999821" level="INFO">Clicking element 'xpath: //button[contains(text(),'Log in')]'.</msg>
+<msg time="2024-03-07T08:59:06.999821" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/elements {"using": "xpath", "value": "//button[contains(text(),'Log in')]"}</msg>
+<msg time="2024-03-07T08:59:07.019804" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:07.020801" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.6"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:07.020801" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:07.020801" level="DEBUG">POST http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.6/click {}</msg>
+<msg time="2024-03-07T08:59:07.793449" level="DEBUG">http://localhost:63695 "POST /session/748a7d169a6eeca82cca2a07a3fd6813/element/f.C6565B5A1AC6FF3B17C92A99F8949009.d.3558AE0626D28215F402DFA4229D4FA5.e.6/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:07.793449" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:07.793449" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:07.793449" level="TRACE">Return: None</msg>
+<arg>xpath: //button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:59:06.998822" elapsed="0.795626"/>
+</kw>
+<return>
+<value>True</value>
+<status status="PASS" start="2024-03-07T08:59:07.794448" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-07T08:59:07.794448" level="TRACE">Return: 'True'</msg>
+<msg time="2024-03-07T08:59:07.794448" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>${data[0]}</arg>
+<arg>${data[1]}</arg>
+<status status="PASS" start="2024-03-07T08:59:06.552239" elapsed="1.243207"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-07T08:59:07.795446" level="TRACE">Arguments: [ 'True' | console=True ]</msg>
+<msg time="2024-03-07T08:59:07.796445" level="INFO">True</msg>
+<msg time="2024-03-07T08:59:07.800443" level="TRACE">Return: None</msg>
+<arg>${status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-07T08:59:07.795446" elapsed="0.005996"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2024-03-07T08:59:07.803439" level="TRACE">Arguments: [ '"Fail"=="Pass"' | 'Title Should Be' | 'Dashboard / nopCommerce administration' | 'ELSE IF' | '"${data[2]}"=="Fail"' | 'Title Should Be' | 'Your store. Login' ]</msg>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:07.806436" level="TRACE">Arguments: [ 'Your store. Login' ]</msg>
+<msg time="2024-03-07T08:59:07.806436" level="DEBUG">GET http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813/title {}</msg>
+<msg time="2024-03-07T08:59:07.847397" level="DEBUG">http://localhost:63695 "GET /session/748a7d169a6eeca82cca2a07a3fd6813/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:07.849396" level="DEBUG">Remote response: status=200 | data={"value":"Your store. Login"} | headers=HTTPHeaderDict({'Content-Length': '29', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:07.850403" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:07.850403" level="INFO">Page title is 'Your store. Login'.</msg>
+<msg time="2024-03-07T08:59:07.850403" level="TRACE">Return: None</msg>
+<arg>Your store. Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-07T08:59:07.805436" elapsed="0.044967"/>
+</kw>
+<msg time="2024-03-07T08:59:07.850403" level="TRACE">Return: None</msg>
+<arg>"${data[2]}"=="Pass"</arg>
+<arg>Title Should Be</arg>
+<arg>Dashboard / nopCommerce administration</arg>
+<arg>ELSE IF</arg>
+<arg>"${data[2]}"=="Fail"</arg>
+<arg>Title Should Be</arg>
+<arg>Your store. Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-07T08:59:07.801442" elapsed="0.048961"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:07.851395" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:59:07.851395" level="DEBUG">Closing browser with session id 748a7d169a6eeca82cca2a07a3fd6813.</msg>
+<msg time="2024-03-07T08:59:07.851395" level="DEBUG">DELETE http://localhost:63695/session/748a7d169a6eeca82cca2a07a3fd6813 {}</msg>
+<msg time="2024-03-07T08:59:07.997257" level="DEBUG">http://localhost:63695 "DELETE /session/748a7d169a6eeca82cca2a07a3fd6813 HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:07.997257" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:07.997257" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:10.280792" level="TRACE">Return: None</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-07T08:59:07.851395" elapsed="2.429397"/>
+</kw>
+<var name="${data}">('adm@yourstore.com', 'admin', 'Fail')</var>
+<status status="PASS" start="2024-03-07T08:58:57.085139" elapsed="13.195653"/>
+</iter>
+<iter>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:10.281792" level="TRACE">Arguments: [ 'https://admin-demo.nopcommerce.com/' | 'Chrome' ]</msg>
+<msg time="2024-03-07T08:59:10.282791" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg time="2024-03-07T08:59:10.283796" level="DEBUG">Selenium Manager binary found at: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2024-03-07T08:59:10.283796" level="DEBUG">Executing process: C:\Users\user\PycharmProjects\pythonProject_WD_eve_jan2024\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2024-03-07T08:59:10.987075" level="DEBUG">Driver path: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:59:10.987075" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2024-03-07T08:59:10.988074" level="DEBUG">Using driver at: E:\selenium\drivers\chromedriver.exe</msg>
+<msg time="2024-03-07T08:59:10.993071" level="DEBUG">Started executable: `E:\selenium\drivers\chromedriver.exe` in a child process with pid: 2272 using 0 to output -3</msg>
+<msg time="2024-03-07T08:59:11.503079" level="DEBUG">POST http://localhost:63720/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "browserVersion": null, "goog:chromeOptions": {"extensions": [], "binary": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", "args": []}}}}</msg>
+<msg time="2024-03-07T08:59:11.504079" level="DEBUG">Starting new HTTP connection (1): localhost:63720</msg>
+<msg time="2024-03-07T08:59:12.788978" level="DEBUG">http://localhost:63720 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:12.788978" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"122.0.6261.95","chrome":{"chromedriverVersion":"122.0.6261.69 (81bc525b6a36d91ed7fe98a4b53c6f53c79adbb2-refs/branch-heads/6261_57@{#3})","userDataDir":"C:\\Users\\user\\AppData\\Local\\Temp\\scoped_dir2272_550274244"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63724"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"23847e24e9b930e4f1b0bc33669974a1"}} | headers=HTTPHeaderDict({'Content-Length': '879', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:12.789976" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:12.789976" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/timeouts {"script": 5000}</msg>
+<msg time="2024-03-07T08:59:12.791975" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:12.791975" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:12.791975" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:12.792973" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/timeouts {"implicit": 0}</msg>
+<msg time="2024-03-07T08:59:12.793973" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:12.793973" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:12.794974" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:12.794974" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/timeouts {"pageLoad": 300000}</msg>
+<msg time="2024-03-07T08:59:12.796970" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:12.796970" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:12.796970" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:12.796970" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/url {"url": "https://admin-demo.nopcommerce.com/"}</msg>
+<msg time="2024-03-07T08:59:19.061994" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/url HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.061994" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.061994" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.061994" level="DEBUG">Opened browser with session id 23847e24e9b930e4f1b0bc33669974a1.</msg>
+<msg time="2024-03-07T08:59:19.061994" level="TRACE">Return: 5</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-07T08:59:10.281792" elapsed="8.780202"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:19.062992" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:59:19.063993" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/window/maximize {}</msg>
+<msg time="2024-03-07T08:59:19.244828" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.244828" level="DEBUG">Remote response: status=200 | data={"value":{"height":744,"width":1382,"x":-8,"y":-8}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.244828" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.245828" level="TRACE">Return: None</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-07T08:59:19.062992" elapsed="0.182836"/>
+</kw>
+<kw name="Login using username and password with return" owner="Resources">
+<msg time="2024-03-07T08:59:19.248824" level="TRACE">Arguments: [ ${usr}='adm@yourstore.com' | ${pass}='adm' ]</msg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:19.248824" level="TRACE">Arguments: [ 'id:Email' | 'adm@yourstore.com' | clear=True ]</msg>
+<msg time="2024-03-07T08:59:19.248824" level="INFO">Typing text 'adm@yourstore.com' into text field 'id:Email'.</msg>
+<msg time="2024-03-07T08:59:19.248824" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/elements {"using": "css selector", "value": "[id=\"Email\"]"}</msg>
+<msg time="2024-03-07T08:59:19.273800" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.273800" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.1"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.273800" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.274800" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.1/clear {}</msg>
+<msg time="2024-03-07T08:59:19.350620" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.1/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.350620" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.350620" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.351617" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.1/value {"text": "adm@yourstore.com", "value": ["a", "d", "m", "@", "y", "o", "u", "r", "s", "t", "o", "r", "e", ".", "c", "o", "m"]}</msg>
+<msg time="2024-03-07T08:59:19.466214" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.1/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.466214" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.466214" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.467218" level="TRACE">Return: None</msg>
+<arg>id:Email</arg>
+<arg>${usr}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:59:19.248824" elapsed="0.218394"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:19.468210" level="TRACE">Arguments: [ 'id:Password' | 'adm' | clear=True ]</msg>
+<msg time="2024-03-07T08:59:19.469210" level="INFO">Typing text 'adm' into text field 'id:Password'.</msg>
+<msg time="2024-03-07T08:59:19.469210" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/elements {"using": "css selector", "value": "[id=\"Password\"]"}</msg>
+<msg time="2024-03-07T08:59:19.494186" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.494186" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.3"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.494186" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.494186" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.3/clear {}</msg>
+<msg time="2024-03-07T08:59:19.708986" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.3/clear HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.708986" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.708986" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.709986" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.3/value {"text": "adm", "value": ["a", "d", "m"]}</msg>
+<msg time="2024-03-07T08:59:19.779921" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.3/value HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.779921" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.779921" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.779921" level="TRACE">Return: None</msg>
+<arg>id:Password</arg>
+<arg>${pass}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:59:19.468210" elapsed="0.311711"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:19.780920" level="TRACE">Arguments: [ "xpath: //button[contains(text(),'Log in')]" ]</msg>
+<msg time="2024-03-07T08:59:19.780920" level="INFO">Clicking element 'xpath: //button[contains(text(),'Log in')]'.</msg>
+<msg time="2024-03-07T08:59:19.780920" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/elements {"using": "xpath", "value": "//button[contains(text(),'Log in')]"}</msg>
+<msg time="2024-03-07T08:59:19.801900" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/elements HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:19.802899" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.6"}]} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:19.802899" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:19.802899" level="DEBUG">POST http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.6/click {}</msg>
+<msg time="2024-03-07T08:59:20.497253" level="DEBUG">http://localhost:63720 "POST /session/23847e24e9b930e4f1b0bc33669974a1/element/f.7989CDC541125A35041329D838C932D9.d.4DE1556E95203F11FCE3A925C14C1F3B.e.6/click HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:20.497253" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:20.497253" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:20.497253" level="TRACE">Return: None</msg>
+<arg>xpath: //button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-07T08:59:19.780920" elapsed="0.717333"/>
+</kw>
+<return>
+<value>True</value>
+<status status="PASS" start="2024-03-07T08:59:20.498253" elapsed="0.000000"/>
+</return>
+<msg time="2024-03-07T08:59:20.498253" level="TRACE">Return: 'True'</msg>
+<msg time="2024-03-07T08:59:20.498253" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>${data[0]}</arg>
+<arg>${data[1]}</arg>
+<status status="PASS" start="2024-03-07T08:59:19.245828" elapsed="1.252425"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-07T08:59:20.499252" level="TRACE">Arguments: [ 'True' | console=True ]</msg>
+<msg time="2024-03-07T08:59:20.499252" level="INFO">True</msg>
+<msg time="2024-03-07T08:59:20.500251" level="TRACE">Return: None</msg>
+<arg>${status}</arg>
+<arg>console=True</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-07T08:59:20.499252" elapsed="0.000999"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2024-03-07T08:59:20.502250" level="TRACE">Arguments: [ '"Fail"=="Pass"' | 'Title Should Be' | 'Dashboard / nopCommerce administration' | 'ELSE IF' | '"${data[2]}"=="Fail"' | 'Title Should Be' | 'Your store. Login' ]</msg>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:20.505247" level="TRACE">Arguments: [ 'Your store. Login' ]</msg>
+<msg time="2024-03-07T08:59:20.505247" level="DEBUG">GET http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1/title {}</msg>
+<msg time="2024-03-07T08:59:20.548206" level="DEBUG">http://localhost:63720 "GET /session/23847e24e9b930e4f1b0bc33669974a1/title HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:20.549205" level="DEBUG">Remote response: status=200 | data={"value":"Your store. Login"} | headers=HTTPHeaderDict({'Content-Length': '29', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:20.549205" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:20.549205" level="INFO">Page title is 'Your store. Login'.</msg>
+<msg time="2024-03-07T08:59:20.549205" level="TRACE">Return: None</msg>
+<arg>Your store. Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-07T08:59:20.504247" elapsed="0.045958"/>
+</kw>
+<msg time="2024-03-07T08:59:20.550205" level="TRACE">Return: None</msg>
+<arg>"${data[2]}"=="Pass"</arg>
+<arg>Title Should Be</arg>
+<arg>Dashboard / nopCommerce administration</arg>
+<arg>ELSE IF</arg>
+<arg>"${data[2]}"=="Fail"</arg>
+<arg>Title Should Be</arg>
+<arg>Your store. Login</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-07T08:59:20.501250" elapsed="0.048955"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<msg time="2024-03-07T08:59:20.551205" level="TRACE">Arguments: [  ]</msg>
+<msg time="2024-03-07T08:59:20.551205" level="DEBUG">Closing browser with session id 23847e24e9b930e4f1b0bc33669974a1.</msg>
+<msg time="2024-03-07T08:59:20.551205" level="DEBUG">DELETE http://localhost:63720/session/23847e24e9b930e4f1b0bc33669974a1 {}</msg>
+<msg time="2024-03-07T08:59:20.873903" level="DEBUG">http://localhost:63720 "DELETE /session/23847e24e9b930e4f1b0bc33669974a1 HTTP/1.1" 200 0</msg>
+<msg time="2024-03-07T08:59:20.873903" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2024-03-07T08:59:20.873903" level="DEBUG">Finished Request</msg>
+<msg time="2024-03-07T08:59:23.003642" level="TRACE">Return: None</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-07T08:59:20.550205" elapsed="2.453437"/>
+</kw>
+<var name="${data}">('adm@yourstore.com', 'adm', 'Fail')</var>
+<status status="PASS" start="2024-03-07T08:59:10.281792" elapsed="12.721850"/>
+</iter>
+<var>${data}</var>
+<value>@{login_data_py}</value>
+<status status="PASS" start="2024-03-07T08:58:30.220428" elapsed="52.783214"/>
+</for>
+<status status="PASS" start="2024-03-07T08:58:30.217431" elapsed="52.787213"/>
+</test>
+<status status="PASS" start="2024-03-07T08:58:15.464057" elapsed="67.542585"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
